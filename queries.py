@@ -1,6 +1,5 @@
 from models import *
 
-
 def return_christian_bales_roles(session):
     bale = session.query(Actor).filter_by(name='Christian Bale').one()
     return bale.roles
