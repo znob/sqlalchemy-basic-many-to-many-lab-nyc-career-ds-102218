@@ -10,8 +10,5 @@ Base = declarative_base()
 
 
 
-
-
-
 engine = create_engine('sqlite:///:memory:')
 Base.metadata.create_all(engine)
