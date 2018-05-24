@@ -3,15 +3,15 @@
 
 ## Objectives
 
-1.  Build a "has many through" relationship using SQLAlchemy
+1.  Build a basic "has many through" relationship, consisting of a join table with only foreign keys, using SQLAlchemy
 2.  Write an Alembic migration to create a join table consisting of only foreign keys
 3.  Query from a database containing this relationship
 
 ## Instructions
 
-In the "One to many" associations lab, we used SQLAlchemy to create establish a "belongs to" and "has many" relationship between our `Actor` and `Role` classes.  Every instance of the Actor class could have many roles, and each instance of the Role class belonged to an Actor.
+In the "One to many" associations lab, we used SQLAlchemy to establish a "belongs to" and "has many" relationship between our `Actor` and `Role` classes.  Every instance of the Actor class had many roles, and each instance of the Role class belonged to an Actor.
 
-This relationship might not properly mimic the real world, however.  Although Actors do have many Roles, shouldn't a Role also have many Actors?  For instance, the role of James Bond has been played by Sean Connery, George Lazenby, Roger Moore, Pierce Brosnan, and Daniel Craig.  In this lab, we will build out this relationship by creating a join table called `actor_roles` containing `actor_id` and `role_id` columns.
+However, this relationship might not accurately represent the real world.  Although Actors do have many Roles, shouldn't a Role also have many Actors?  For instance, the role of James Bond has been played by Sean Connery, George Lazenby, Roger Moore, Pierce Brosnan, and Daniel Craig.  In this lab, we will build out this "many to many" relationship by creating a join table called `actor_roles` containing `actor_id` and `role_id` columns.  The `actor_roles` table will only have these foreign keys, so there's no need for a full SQLAlchemy Association Object.
 
 #### `Actor` and `Role`
 
@@ -46,6 +46,7 @@ Write an Alembic migration to create the `actor_roles` join table
 
 * Establish the association between the two models with the `relationship()` function
     - Actor: `roles = relationship('Role', secondary='actor_roles')`
+    
     - Role: `actors = relationship('Actor', secondary='actor_roles')`
 
 #### Query from the relationship
@@ -53,5 +54,7 @@ Write an Alembic migration to create the `actor_roles` join table
 Write queries in `query.py` to satisfy the tests.
 
 * `return_christian_bales_roles` should return the list of Christian Bale's role instances
+
 * `return_catwoman_actors` should return the list of actors that have played Catwoman
+
 * `return_number_of_batman_actors` should return the number of actors in the database who have played Batman
