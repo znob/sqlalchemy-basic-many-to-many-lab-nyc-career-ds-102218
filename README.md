@@ -46,7 +46,7 @@ Write an Alembic migration to create the `actor_roles` join table
 
 * Establish the association between the two models with the `relationship()` function
     - Actor: `roles = relationship('Role', secondary='actor_roles')`
-    
+
     - Role: `actors = relationship('Actor', secondary='actor_roles')`
 
 #### Query from the relationship
