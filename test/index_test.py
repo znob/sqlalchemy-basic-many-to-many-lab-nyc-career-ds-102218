@@ -3,7 +3,7 @@ sys.path.insert(0, '..')
 from queries import *
 from models import *
 
-exec(open("../seed.py").read())
+exec(open("./seed.py").read())
 
 class TestBasicHasManyThrough(unittest.TestCase):
     def test_actors(self):
