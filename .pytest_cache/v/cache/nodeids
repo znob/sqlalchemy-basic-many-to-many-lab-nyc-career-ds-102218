@@ -1,0 +1,9 @@
+[
+  "test/index_test.py::TestBasicHasManyThrough::test_actors",
+  "test/index_test.py::TestBasicHasManyThrough::test_actors_have_many_roles",
+  "test/index_test.py::TestBasicHasManyThrough::test_return_catwoman_actors",
+  "test/index_test.py::TestBasicHasManyThrough::test_return_christian_bales_roles",
+  "test/index_test.py::TestBasicHasManyThrough::test_return_number_of_batman_actors",
+  "test/index_test.py::TestBasicHasManyThrough::test_roles",
+  "test/index_test.py::TestBasicHasManyThrough::test_roles_have_many_actors"
+]
