@@ -26,7 +26,7 @@ class TestBasicHasManyThrough(unittest.TestCase):
         self.assertEqual(len(batman.actors), 3)
 
     def test_return_christian_bales_roles(self):
-        roles = return_christian_bales_roles(session)
+        roles = return_christian_bales_roles()
         self.assertEqual(len(roles), 3)
 
         characters = []
@@ -35,7 +35,7 @@ class TestBasicHasManyThrough(unittest.TestCase):
         self.assertEqual(characters, ['Dr. Michael Burry', 'Patrick Bateman', 'Batman'])
 
     def test_return_catwoman_actors(self):
-        actors = return_catwoman_actors(session)
+        actors = return_catwoman_actors()
         self.assertEqual(len(actors), 2)
 
         names = []
@@ -44,5 +44,5 @@ class TestBasicHasManyThrough(unittest.TestCase):
         self.assertEqual(names, ['Michelle Pfeiffer', 'Anne Hathaway'])
 
     def test_return_number_of_batman_actors(self):
-        result = return_number_of_batman_actors(session)
+        result = return_number_of_batman_actors()
         self.assertEqual(result, 3)
