@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="1" failures="0" name="pytest" skips="0" tests="1" time="0.336"><testcase classname="" file="test/index_test.py" name="test.index_test" time="0"><error message="collection failure">test/index_test.py:3: in &lt;module&gt;
+    from queries import *
+queries.py:23: in &lt;module&gt;
+    print(return_christian_bales_roles())
+queries.py:12: in return_christian_bales_roles
+    return session.query(Actor).filter(Actor.name==&quot;Christian Bale&quot;)[0].roles
+/opt/conda/envs/learn-env/lib/python3.6/site-packages/sqlalchemy/orm/query.py:2692: in __getitem__
+    return list(self[item:item + 1])[0]
+E   IndexError: list index out of range</error></testcase></testsuite>

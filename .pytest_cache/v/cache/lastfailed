@@ -1,4 +1,5 @@
 {
+  "test/index_test.py": true,
   "test/index_test.py::TestBasicHasManyThrough::test_actors": true,
   "test/index_test.py::TestBasicHasManyThrough::test_actors_have_many_roles": true,
   "test/index_test.py::TestBasicHasManyThrough::test_return_catwoman_actors": true,
